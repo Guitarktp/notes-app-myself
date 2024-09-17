@@ -1,5 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import SignUp from "./pages/signup";
+import Login from "./pages/login";
+
 
 const App = () => {
     const router = createBrowserRouter([
@@ -16,6 +19,7 @@ const App = () => {
               element: (
                 <>
                   <Navbar />
+                  <SignUp />
                 </>
               ),
             },
@@ -24,6 +28,7 @@ const App = () => {
               element: (
                 <>
                   <Navbar />
+                  <Login />
                 </>
               ),
             },
@@ -33,7 +38,7 @@ const App = () => {
 return (
     
     <RouterProvider router={router} />
-
+    
   );
 };
 
