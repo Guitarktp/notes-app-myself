@@ -2,9 +2,9 @@ import jwt from 'jsonwebtoken'
 
 const sign = (payloadInfo) => {
 
-    console.log('Sign Token', process.env.JWT_SCRET);
+    console.log('Sign Token', process.env.JWT_SECRET);
     // สร้าง jwt
-    return jwt.sign(payloadInfo, process.env.JWT_SCRET, {expiresIn: '3d'});
+    return jwt.sign(payloadInfo, process.env.JWT_SECRET, {expiresIn: '1d'});
 }
 
 const verify = (token) => {
